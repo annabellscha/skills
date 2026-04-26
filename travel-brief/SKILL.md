@@ -7,9 +7,16 @@ description: Generate a concise, actionable travel brief for a destination. Trig
 
 Generate a structured, tight travel brief for any destination. Based on the conversation, the user is traveling somewhere and wants a quick but complete prep sheet.
 
-## Step 0 — Read user profile (always do this first)
+## MANDATORY FIRST STEP — Read the user profile before doing anything else
 
-Read `{base_directory}/reference/USER_PROFILE.md`. For every non-blank field, override the corresponding default below. Blank fields fall back to skill defaults.
+> **Do not begin research. Do not write a single section. Read the user profile first.**
+
+Read `{base_directory}/reference/USER_PROFILE.md` using the file read tool.
+
+- If the file exists and has filled-in fields → use those values throughout the entire brief, they take priority over all skill defaults
+- If the file is missing or all fields are blank → fall back to skill defaults (EU/German nationality, EUR currency, Google Maps, no dietary restrictions, etc.)
+
+There is no case where this step is skipped.
 
 | Field | Effect |
 |---|---|
